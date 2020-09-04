@@ -25,9 +25,9 @@ def predict_logic():
         valence = float(request.form['valence'])
         pred_name = model.predict([[acousticness,danceability,energy,instrumentalness,liveness,speechiness,tempo,valence]]).tolist()[0]
         if  pred_name == 'Rock':
-            return render_template('index.html',prediction_texts="You are a Rock Music Lover!")
+            return render_template('index.html',prediction_text="You are a Rock Music Lover!")
         else:
-            return render_template('index.html',prediction_texts="You are a Hip-Hop Music Lover!")
+            return render_template('index.html',prediction_text="You are a Hip-Hop Music Lover!")
     else:
         return render_template('index.html')
 
