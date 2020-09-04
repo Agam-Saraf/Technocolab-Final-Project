@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect
 import pickle
 
 app = Flask(__name__)
-Filename = 'model.pkl'
+Filename = 'model_tree.pkl'
 with open(Filename, 'rb') as file:  
     model = pickle.load(file)
 
